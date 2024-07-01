@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estante Online</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <input type="checkbox" id="menu" class="container_botao"> <!--detecta quando clica e fica preenchido-->
+            <label for="menu" class="container_rotulo">
+                <!--label funciona p associar todos os elementos dentro dele com outro que tenha o mesmo id-->
+                <span class="cabecalho_menu-hamburguer container_imagem"></span>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu_titulo">Categorias</li>
+                <li class="lista-menu_item">
+                    <a href="#" class="lista-menu_link">Todos</a>
+                </li>
+                <li class="lista-menu_item">
+                    <a href="#" class="lista-menu_link">Mais vendidos</a>
+                </li>
+                <li class="lista-menu_item">
+                    <a href="#" class="lista-menu_link">Mistério</a>
+                </li>
+                <li class="lista-menu_item">
+                    <a href="#" class="lista-menu_link">Romance</a>
+                </li>
+                <li class="lista-menu_item">
+                    <a href="#" class="lista-menu_link">Biografias</a>
+                </li>
+            </ul>
+            <img src="assets/LogoLivro.png" alt="Logo da Estante Online" class="logo_cabecalho container_imagem">
+            <h1 class="container_titulo"><b class="container_titulo-negrito">Estante</b>Virtual</h1>
+        </div>
+
+        <ul class="opcoes">
+            <input type="checkbox" id="opcoes-menu" class="opcoes_botao">
+            <label for="opcoes-menu" class="opcoes_rotulo">
+                <li class="opcoes_item">Categorias</li>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu_item">
+                    <a href="#" class="lista-menu_link">Todos</a>
+                </li>
+                <li class="lista-menu_item">
+                    <a href="#" class="lista-menu_link">Mais vendidos</a>
+                </li>
+                <li class="lista-menu_item">
+                    <a href="#" class="lista-menu_link">Mistério</a>
+                </li>
+                <li class="lista-menu_item">
+                    <a href="#" class="lista-menu_link">Romance</a>
+                </li>
+                <li class="lista-menu_item">
+                    <a href="#" class="lista-menu_link">Biografias</a>
+                </li>
+            </ul>
+            <li class="opcoes_item"><a href="#" class="opcoes_link">Favoritos</a></li>
+            <li class="opcoes_item"><a href="#" class="opcoes_link">Minha estante</a></li>
+        </ul>
+
+        <div class="container">
+            <a href="#"><img src="assets/Favoritos.png" alt="Meus favoritos"
+                    class="icones_cabecalho container_imagem container_imagem-favoritos"></a>
+            <a href="#" class="container_link">
+                <img src="assets/Compras.png" alt="Carrinho de compras" class="icones_cabecalho container_imagem">
+                <p class="container_texto">Minha sacola</p>
+            </a>
+            <a href="#" class="container_link">
+                <img src="assets/Usuario.png" alt="Meu perfil" class="icones_cabecalho container_imagem">
+                <p class="container_texto">Meu perfil</p>
+            </a>
+        </div>
+    </header>
+
+    <section class="banner">
+        <h2 class="banner_titulo">Já sabe por qual livro começar?</h2>
+        <p class="banner_texto">Encontre em nossa estante o que desejar ler</p>
+        <input type="search" class="banner_pesquisa" placeholder="Qual será sua próxima leitura?">
+        <!--input de pesquisa, placeholder é um textinho que quando você começa a escrever ele some-->
+    </section>
+
+    <section class="carrossel">
+        <h2 class="carrossel_titulo">Últimos lançamentos</h2>
+        <div class="carrossel_container">
+            <div class="swiper">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/Livro-BibliotecaDaMeiaNoite.png"
+                            alt="Capa do livro Biblioteca da Meia-Noite" class="carrossel_livros"></div>
+                    <div class="swiper-slide"><img src="assets/Livro-CodigoDaVinci.png" alt="Capa do livro Código da Vinci"
+                            class="carrossel_livros"></div>
+                    <div class="swiper-slide"><img src="assets/Livro-EAssimQueAcaba.png"
+                            alt="Capa do livro É Assim que Acaba" class="carrossel_livros"></div>
+                    <div class="swiper-slide"><img src="assets/Livro-Mentirosos.png" alt="Capa do livro Mentirosos"
+                            class="carrossel_livros"></div>
+                    <div class="swiper-slide"><img src="assets/Livro-MorroDosVentosUivantes.png"
+                            alt="Capa do livro Morro dos Ventos Uivantes" class="carrossel_livros"></div>
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <div class="card">
+                <div class="card_descricao">
+                    <div class="descricao">
+                        <h3 class="descricao_titulo">Talvez você também se interesse por...</h3>
+                        <h2 class="descricao_titulo-livro">Revolução dos Bichos</h2>
+                        <p class="descricao_texto">Uma fábula sobre poder. A revolução degenera numa tirania ainda mais
+                            opressiva que a dos humanos.</p>
+                    </div>
+                    <img src="assets/Livro-RevolucaoDosBichos.png" alt="Capa do livro Revolução dos Bichos"
+                        class="carrossel_livros">
+                </div>
+
+                <div class="card_botoes">
+                    <ul class="botoes">
+                        <li class="botoes_item"><img src="assets/Favoritos.png" alt="Favoritar item"
+                                class="icones_cabecalho"></li>
+                        <li class="botoes_item"> <img src="assets/Compras.png" alt="Adicionar no carrinho de compras"
+                                class="icones_cabecalho"></li>
+                    </ul>
+                    <a href="#" class="botoes_ancora">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="carrossel">
+        <h2 class="carrossel_titulo">Mais vendidos</h2>
+        <div class="carrossel_container">
+            <div class="swiper">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/Livro-Os7MaridosDeEvelynHugo.png"
+                            alt="Capa do livro Os 7 Maridos De Evelyn Hugo" class="carrossel_livros"></div>
+                    <div class="swiper-slide"><img src="assets/Livro-PessoasNormais.png" alt="Capa do livro Pessoas Normais"
+                            class="carrossel_livros"></div>
+                    <div class="swiper-slide"><img src="assets/Livro-SemCoracao.png" alt="Capa do livro Sem Coração"
+                            class="carrossel_livros"></div>
+                    <div class="swiper-slide"><img src="assets/Livro-MulheresQueCorremComOsLobos.png"
+                            alt="Capa do livro Mulheres Que Correm Com Os Lobos" class="carrossel_livros"></div>
+                    <div class="swiper-slide"><img src="assets/Livro-ORetratoDeDorianGrey.png"
+                            alt="Capa do livro O Retrato de Dorian Grey" class="carrossel_livros"></div>
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <div class="card">
+                <div class="card_descricao">
+                    <div class="descricao">
+                        <h3 class="descricao_titulo">Autora do Mês</h3>
+                        <h2 class="descricao_titulo-livro">Colleen Hoover</h2>
+                        <p class="descricao_texto">Formada em servoço social, Colleen hoje é autora e especialista em livros
+                            de romance</p>
+                    </div>
+                    <img src="assets/Livro-EAssimQueComeca.png" alt="Capa do livro É Assim que Começa"
+                        class="carrossel_livros">
+                </div>
+
+                <div class="card_botoes">
+                    <ul class="botoes">
+                        <li class="botoes_item"><img src="assets/Favoritos.png" alt="Favoritar item"
+                                class="icones_cabecalho"></li>
+                        <li class="botoes_item"><img src="assets/Compras.png" alt="Adicionar no carrinho de compras"
+                                class="icones_cabecalho"></li>
+                    </ul>
+                    <a href="#" class="botoes_ancora">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="topicos">
+        <h2 class="topicos_titulo">Tópicos visitados recentemente</h2>
+        <ul class="topicos_lista">
+            <li class="topicos_item"><a href="#" class="topicos_link">Romance</a></li>
+            <li class="topicos_item"><a href="#" class="topicos_link">Mistério</a></li>
+            <li class="topicos_item"><a href="#" class="topicos_link">Drama</a></li>
+            <li class="topicos_item"><a href="#" class="topicos_link">Autoajuda</a></li>
+            <li class="topicos_item"><a href="#" class="topicos_link">Finanças</a></li>
+            <li class="topicos_item"><a href="#" class="topicos_link">Biografia</a></li>
+        </ul>
+    </section>
+
+    <section class="contato">
+        <div class="contato_descricao">
+            <h2 class="contato_titulo">Fique por dentro das novidades!</h2>
+            <p class="contato_texto">Atualizações de novos livros, promoções e outros</p>
+        </div>
+        <input type="email" class="contato_email" placeholder="Cadastre seu e-mail">
+    </section>
+
+    <hr /> <!--faz um risco no projeto, uma linha-->
+
+    <footer class="rodape">
+        <h2 class="rodape_titulo">Grupo Estante Virtual</h2>
+        <ul class="lista-rodape">
+            <li class="lista-rodape_titulo">Empresas</li>
+            <li class="lista-rodape_item"><img src="assets/LogoLivro.png" alt="Logo da Estante Virtual" class="icones_rodape">Estante Virtual</li>
+            <li class="lista-rodape_item"><img src="assets/EstanteVirtualEmpresas.svg" alt="Logo da Estante Virtual Empresas">Estante Virtual Empresas</li>
+        </ul>
+
+        <ul class="lista-rodape">
+            <li class="lista-rodape_titulo">Parcerias</li>
+            <li class="lista-rodape_item"><img src="assets/Alura.svg" alt="Logo da Alura" class="icones_rodape">Alura</li>
+            <li class="lista-rodape_item"><img src="assets/MusicDot.svg" alt="Logo da Music Dot" class="icones_rodape">Music Dot</li>
+            <li class="lista-rodape_item"><img src="assets/CafeParcerias.svg" alt="Logo da Cafe Parcerias" class="icones_rodape">Cafe Parcerias</li>
+            <li class="lista-rodape_item"><img src="assets/PM3.svg" alt="Logo da PM3" class="icones_rodape">PM3</li>
+            <li class="lista-rodape_item"><img src="assets/HipstersTech.svg" alt="Logo da HipstersTech" class="icones_rodape">Hipsters Tech</li>
+        </ul>
+
+        <ul class="lista-rodape">
+            <li class="lista-rodape_titulo">Comunidade</li>
+            <li class="lista-rodape_item"><img src="assets/DiversidadeLiteraria.svg" alt="Logo da Diversidade Literaria" class="icones_rodape">Diversidade Literaria</li>
+            <li class="lista-rodape_item"><img src="assets/ComunidadeLiteraria.svg" alt="Logo da Comunidade Literaria" class="icones_rodape">Comunidade Literaria</li>
+        </ul>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+@import url("header.css");
+@import url("banner.css");
+@import url("carrossel.css");
+@import url("topicos.css");
+@import url("contato.css");
+@import url("rodape.css");
+
+:root {
+    --cinza-claro: #C7C8CC;
+    --cinza-escrita-rodape: #474646;
+    --cinza-titulo-rodape: #858585;
+    --cinza-escuro: #373A40;
+    --branco: #FFFFFF;
+    --verde-bem-escuro: #004339;
+    --verde: #008055;
+    --verde-claro: #00B276;
+    --verde-bem-claro: #75ffd1;
+    --preto: #000000;
+    --fonte-principal: "Poppins";
+    --fonte-secundaria: "Josefin Sans";
+}
+
+body {
+    background-color: var(--cinza-claro);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+
+
+
+/*opções de cores:
+verde:
+    base do livro: #008055
+    base 2: #00B276
+    parte de cima: #00B276
+    #008040
+cinza:
+    #F1F1F1 quase branco
+Outros:
+#326589
+*/

@@ -1,0 +1,166 @@
+.cabecalho {
+    background-color: var(--cinza-claro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /*libera a opção de colocar outros atributos como top, left, right e bottom*/
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho_menu-hamburguer {
+    width: 33px;
+    height: 27px;
+    background-image: url("../assets/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.container_botao {
+    display: none; /*tirando a flag do checkbox*/
+}
+
+.container_imagem {
+    padding: 0.5em; /*aqui ela colocou 1em*/
+}
+
+.lista-menu {
+    display: none; /*desaparece com o elemento e não ocupa espaço*/
+    position: absolute; /*permite que movimente o elemento de acordo com o pai que tenha position diferente de static*/
+    top: 100%; /*foi 100% pra baixo do cabeçalho*/
+    width: 70vw; /*medida viewport width, pega a largura da tela*/
+}
+
+.container_botao:checked~.lista-menu { /*~ é um combinador css. Se o container_botao estiver checked procura o elemento que venha depopis dele com o nome lista-menu e coloca a configuração*/
+    display: block;
+}
+
+.logo_cabecalho {
+    width: 33px;
+    height: 25px;
+}
+
+.icones_cabecalho {
+    width: 33px;
+    height: 33px;
+}
+
+.lista-menu_titulo, .lista-menu_item {
+    padding: 1em;
+    background-color: var(--cinza-claro);
+}
+
+.lista-menu_titulo {
+    color: var(--verde);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.lista-menu_link {
+    color: var(--verde-claro);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.container_titulo, .opcoes {
+    display: none;
+}
+
+.container_texto {
+    display: none;
+}
+
+.container_botao:checked~.container_rotulo > .cabecalho_menu-hamburguer { /*> procura a classe que está dentro, cabecalho_menu-hamburguer está dentro de container_rotulo*/
+    background-image: url("../assets/MenuAberto.svg");
+}
+
+.container_botao:checked~.container_rotulo {
+    background-color: var(--verde);
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .container_titulo, .container_titulo-negrito {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+
+    .container_titulo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .container_titulo-negrito {
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex;
+    }
+
+    .opcoes_item {
+        padding: 2em 1em;
+        text-transform: uppercase;
+    }
+
+    .opcoes_link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .container_imagem-favoritos {
+        display: none;
+    }
+
+    .cabecalho_menu-hamburguer {
+        display: none;
+    }
+
+    .opcoes_botao:checked ~ .lista-menu{
+        display: block;
+        width: auto; /*preenche só o espaço dele (do elemento)*/
+    }
+
+    .opcoes_botao {
+        display: none;
+    }
+
+    .opcoes_botao:checked~.opcoes_rotulo > .opcoes_item {
+        background-color: var(--verde);
+        color: var(--branco);
+    }
+
+    .lista-menu_item:hover {
+        background-color: var(--verde);
+    }
+
+    .lista-menu_item:hover>.lista-menu_link {
+        -webkit-text-fill-color: var(--branco);
+    }
+}
+
+@media screen and (min-width: 1728px) {
+
+    .container_link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .container_texto {
+        display: block;
+    }
+
+    .cabecalho {
+        padding: 0 1em;
+    }
+
+    .opcoes {
+        margin-right: auto;
+    }
+}
